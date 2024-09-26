@@ -7,11 +7,6 @@ function loadMenu() {
     
     content.innerHTML = "";
 
-    content.style.display = "flex";
-    content.style.flexDirection = "column";
-    content.style.justifyContent = "center";
-    content.style.alignItems = "center";
-
     const menuCanvas = document.createElement("div");
     menuCanvas.setAttribute("class", "menu-canvas");
     content.appendChild(menuCanvas)
