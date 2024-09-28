@@ -61,4 +61,4 @@ const drinksMenu = [
     }
 ];
 
-export { foodMenu, drinksMenu }
+export { foodMenu, drinksMenu };
