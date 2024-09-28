@@ -54,4 +54,4 @@ function loadContact() {
     content.appendChild(pStreet);
 }
 
-export { loadContact }
+export { loadContact };

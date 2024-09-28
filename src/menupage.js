@@ -1,6 +1,6 @@
 //menupage.js file
 
-import { foodMenu, drinksMenu } from "./menucontent"
+import { foodMenu, drinksMenu } from "./menucontent";
 
 function loadMenu() {
     const content = document.getElementById("content");
@@ -9,7 +9,7 @@ function loadMenu() {
 
     const menuCanvas = document.createElement("div");
     menuCanvas.setAttribute("class", "menu-canvas");
-    content.appendChild(menuCanvas)
+    content.appendChild(menuCanvas);
 
     const menuHeader = document.createElement("h2");
     menuHeader.setAttribute("class", "menu-header");
@@ -74,4 +74,4 @@ function loadMenu() {
 
 }
 
-export { loadMenu }
+export { loadMenu };

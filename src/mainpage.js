@@ -18,7 +18,7 @@ function loadMain() {
 
     const p = document.createElement("p");
     p.setAttribute("class", "p-landing");
-    p.textContent = "Savor fresh fish, vibrant vegetables, and traditional Indonesian dishes, all made with local ingredients and love"
+    p.textContent = "Savor fresh fish, vibrant vegetables, and traditional Indonesian dishes, all made with local ingredients and love";
     divText.appendChild(p);
 
     const menuButton = document.createElement("button");
@@ -29,4 +29,4 @@ function loadMain() {
 
 }
 
-export { loadMain }
+export { loadMain };
