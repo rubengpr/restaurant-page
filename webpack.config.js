@@ -12,7 +12,11 @@ module.exports = {
   },
   devtool: "eval-source-map",
   devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
     watchFiles: ["./src/template.html"],
+    port: 8080,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -32,6 +36,17 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.(mp4|webm|ogg)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "media/[name].[hash].[ext]",
+            publicPath: "/",
+            outputPath: "media",
+          },
+        },
       },
     ],
   },
