@@ -43,8 +43,8 @@ module.exports = {
           loader: "file-loader",
           options: {
             name: "media/[name].[hash].[ext]",
-            publicPath: "/",
-            outputPath: "media",
+            outputPath: "media/",
+            publicPath: "/media/",
           },
         },
       },
