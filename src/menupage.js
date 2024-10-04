@@ -3,24 +3,24 @@
 import { foodMenu, drinksMenu } from "./menucontent";
 
 function loadMenu() {
-    const content = document.getElementById("content");
-    
-    content.innerHTML = "";
+  const content = document.getElementById("content");
 
-    const menuCanvas = document.createElement("div");
-    menuCanvas.setAttribute("class", "menu-canvas");
-    content.appendChild(menuCanvas);
+  content.innerHTML = "";
 
-    const menuHeader = document.createElement("h2");
-    menuHeader.setAttribute("class", "menu-header");
-    menuHeader.textContent = "Food";
-    menuCanvas.appendChild(menuHeader);
+  const menuCanvas = document.createElement("div");
+  menuCanvas.setAttribute("class", "menu-canvas");
+  content.appendChild(menuCanvas);
 
-    const foodContent = document.createElement("div");
-    foodContent.setAttribute("class", "food-content");
-    menuCanvas.appendChild(foodContent);
+  const menuHeader = document.createElement("h2");
+  menuHeader.setAttribute("class", "menu-header");
+  menuHeader.textContent = "Food";
+  menuCanvas.appendChild(menuHeader);
 
-    for (let i=0; i < 6; i++) {
+  const foodContent = document.createElement("div");
+  foodContent.setAttribute("class", "food-content");
+  menuCanvas.appendChild(foodContent);
+
+  for (let i = 0; i < 6; i++) {
     const divDish = document.createElement("div");
     divDish.setAttribute("class", "dish-div");
     foodContent.appendChild(divDish);
@@ -39,39 +39,37 @@ function loadMenu() {
     dishPrice.setAttribute("class", "dish-price");
     dishPrice.textContent = foodMenu[i].price;
     divDish.appendChild(dishPrice);
-    }
+  }
 
-    const drinksHeader = document.createElement("h2");
-    drinksHeader.setAttribute("class", "menu-header");
-    drinksHeader.textContent = "Drinks";
-    menuCanvas.appendChild(drinksHeader);
+  const drinksHeader = document.createElement("h2");
+  drinksHeader.setAttribute("class", "menu-header");
+  drinksHeader.textContent = "Drinks";
+  menuCanvas.appendChild(drinksHeader);
 
+  const drinksContent = document.createElement("div");
+  drinksContent.setAttribute("class", "drinks-content");
+  menuCanvas.appendChild(drinksContent);
 
-    const drinksContent = document.createElement("div");
-    drinksContent.setAttribute("class", "drinks-content");
-    menuCanvas.appendChild(drinksContent);
-
-    for (let i=0; i < 5; i++) {
+  for (let i = 0; i < 5; i++) {
     const divDish = document.createElement("div");
     divDish.setAttribute("class", "dish-div");
     drinksContent.appendChild(divDish);
-    
+
     const drinkTitle = document.createElement("h3");
     drinkTitle.setAttribute("class", "dish-title");
     drinkTitle.textContent = drinksMenu[i].title;
     divDish.appendChild(drinkTitle);
-    
+
     const drinkDescription = document.createElement("p");
     drinkDescription.setAttribute("class", "dish-description");
     drinkDescription.textContent = drinksMenu[i].description;
     divDish.appendChild(drinkDescription);
-    
+
     const drinkPrice = document.createElement("p");
     drinkPrice.setAttribute("class", "dish-price");
     drinkPrice.textContent = drinksMenu[i].price;
     divDish.appendChild(drinkPrice);
-    }
-
+  }
 }
 
 export { loadMenu };
