@@ -1,11 +1,20 @@
 // mainpage.js file
 
 import { loadMenu } from "./menupage";
+import mainVideo from "./media/mainvideo.mp4";
 
 function loadMain() {
   const content = document.getElementById("content");
 
   content.innerHTML = "";
+
+  const video = document.createElement("video");
+  video.setAttribute("loop", "");
+  video.setAttribute("muted", "");
+  video.setAttribute("autoplay", "");
+  video.setAttribute("width", "100%");
+  video.setAttribute("src", mainVideo);
+  content.appendChild(video);
 
   const divText = document.createElement("div");
   divText.setAttribute("id", "text");
